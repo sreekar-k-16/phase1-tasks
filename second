@@ -1,0 +1,17 @@
+import java.util.Scanner;
+    public class eligibility{
+        public static void main(String args[])
+        {
+            Scanner sc =new Scanner(System.in);
+            System.out.println("enter the age");
+            int age=sc.nextInt();
+            if(age<15 || age>60){
+                 System.out.println("not allowed");
+            }
+            else{
+                 System.out.println("allowed");
+            }
+           sc.close();
+        }
+
+    }
