@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class MinimumNotes {
+    public static int minimumNotes(int N) {
+        int[] denominations = {100, 50, 10, 5, 2, 1};
+        int count = 0;
+
+        for (int denom : denominations) {
+            if (N >= denom) {
+                count += N / denom;
+                N %= denom;
+            }
+        }
+        return count;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the amount of change to be given to Pranav: ");
+        int N = scanner.nextInt();
+
+        int result = minimumNotes(N);
+        System.out.println(result);
+    }
+}
